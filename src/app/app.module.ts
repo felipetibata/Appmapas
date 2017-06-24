@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { MapasService } from 'app/services/mapas.service';
+import {FormsModule} from '@angular/forms';
+
 
 
 @NgModule({
@@ -14,9 +17,10 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAv9RleqHjKbv0g9mf4ugeqDMciYUHt1dw'
-    })
+    }),
+    FormsModule
   ],
-  providers: [],
+  providers: [MapasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
